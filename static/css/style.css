@@ -14,7 +14,7 @@ body {
 }
 
 /*inicio*/
-.ov-btn-slide-left {
+.nav {
   background: #fff; 
   color: #454554; 
   border: 2px solid #141155; 
@@ -27,10 +27,10 @@ body {
   display: inline-block;
 }
 
-.ov-btn-slide-left:hover {
+.nav:hover {
   color: #fff; 
 }
-.ov-btn-slide-left::after {
+.nav::after {
   content: "";
   background: #4741d7; 
   position: absolute;
@@ -45,7 +45,7 @@ body {
   transition: all 0.35s;
 }
 
-.ov-btn-slide-left:hover::after {
+.nav:hover::after {
   left: 0;
   right: 0;
   top: 0;

@@ -17,7 +17,7 @@ mysql = MySQL(app)
 # Ruta para la página de inicio
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("index.html") #Carga la plantilla HTML
 
 # Ruta para la página de dashboard
 @app.route("/dashboard")
@@ -39,15 +39,18 @@ def login():
         password = request.form['password']
 
         # Conectarse a la base de datos y verificar las credenciales del usuario
-        cur = mysql.connection.cursor()
-        cur.execute("SELECT * FROM usuario WHERE email = %s", (email,))
-        user = cur.fetchone()
+        cur = mysql.connection.cursor() #Crea un objeto cursor 
+        cur.execute("SELECT * FROM usuario WHERE email = %s", (email,)) #Revisa si en la BD hay un email igual al ingresado
+        
+        user = cur.fetchone() #Guarda el resultado en la variable user la cual contendrá un objeto que representa la fila de la BD que cumple con la consulta.
+                                #Si no se encuentra ninguna fila que coincida con la condición, user será None.
         cur.close()
 
         if user is not None:
             if password == user["password"]:
                  # Si las credenciales son válidas, inicia sesión y redirige al panel de control
-                session['email'] = user['email']
+                session['email'] = user['email']#Se almacena el email del usuario en la sesión.
+                                                #se utiliza para autenticar al usuario en solicitudes posteriores
                 return redirect(url_for("dashboard"))
             else:
                 session['mensaje'] = "Correo o contraseña no válida"
@@ -100,7 +103,7 @@ def registro():
                 (usuario, password, nombre, apellido, fecha_nacimiento, genero, email, pais)
             )
 
-            mysql.connection.commit()
+            mysql.connection.commit() #Se utiliza para confirmar y aplicar los cambios realizados en la base de datos después de una operación de escritura
 
             return redirect(url_for("login"))
     else:
@@ -109,4 +112,5 @@ def registro():
     
 if __name__ == "__main__":
     app.secret_key="santiago" # Clave secreta para manejar sesiones
-    app.run(debug=True)
+                                #La clave secreta se utiliza para cifrar y desencriptar datos en las sesiones de usuario.
+    app.run(debug=True)#el servidor web se ejecutará en modo de depuración. 
