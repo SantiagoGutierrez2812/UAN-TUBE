@@ -1,0 +1,186 @@
+html {height: 100%;}
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(45deg, #5983ac, rgb(150, 195, 96));
+}
+
+.Titulo_6{
+ position: relative;
+ left: 600px;
+}
+
+/*inicio*/
+.ov-btn-slide-left {
+  background: #fff; 
+  color: #454554; 
+  border: 2px solid #141155; 
+  padding: 16px 20px;
+  border-radius: 3px; 
+  position: relative;
+  left: 550px;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ov-btn-slide-left:hover {
+  color: #fff; 
+}
+.ov-btn-slide-left::after {
+  content: "";
+  background: #4741d7; 
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.ov-btn-slide-left:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+a:link { text-decoration: none;
+}
+
+a:visited {
+text-decoration: none;
+}
+
+/* El login */
+
+.caja {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.form {
+  text-align: left;
+}
+
+.form_titulo {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.mensaje-error {
+  color: #ff0000;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.boton1 {
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block; 
+  margin-top: 10px; 
+}
+
+.boton1:hover {
+  background-color: #0056b3;
+}
+
+/******************************************************/
+
+/*Registro*/
+.caja1 {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.form_titulo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+.form-input, select {
+  width: 93%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#genero{
+    width: 99%;
+}
+
+.boton, .boton-regresar {
+  display: inline-block; 
+  margin-top: 10px; 
+}
+
+.boton {
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: #0056b3;
+}
+
+.boton-regresar {
+  background-color: #ccc;
+  color: #333;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.boton-regresar:hover {
+  background-color: #999;
+}

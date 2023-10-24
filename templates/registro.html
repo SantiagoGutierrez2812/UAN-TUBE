@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+{% block title %} Registro {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="style.css">
+    <div class="caja1">
+        <form class=form action="/registro" method="post">
+            <h1 class="form_titulo">Registro</h1>
+
+            <div class="form-group">
+                <label>Nombre de usuario:</label>
+                <input type="text" class="form-input" name="usuario" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contraseña:</label>
+                <input type="password" class="form-input" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label>Nombre:</label>
+                <input type="text" class="form-input" name="nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label>Apellido:</label>
+                <input type="text" class="form-input" name="apellido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" class="form-input" name="fecha_nacimiento" required>
+            </div>            
+
+            <div class="form-group">
+                <label for="genero">Género:</label>
+                <select class="form-input" id="genero" name="genero" required>
+                    <option value="" selected disabled>Seleccione un género</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>            
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" class="form-input" name="email" required>
+            </div>
+            <div class="form-group">
+                <label>País:</label>
+                <input type="text" class="form-input" name="pais" required>
+            </div>
+
+            <div class="form-group">
+                <button class="boton">Sign in</button>
+            </div>
+            <div class="caja2">
+                <button class="boton-regresar" onclick="window.history.back()">Regresar</button>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}
