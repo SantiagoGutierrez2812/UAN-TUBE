@@ -10,7 +10,7 @@ body {
 
 .Titulo_6{
  position: relative;
- left: 600px;
+ left: 580px;
 }
 
 /*inicio*/
@@ -21,7 +21,7 @@ body {
   padding: 16px 20px;
   border-radius: 3px; 
   position: relative;
-  left: 550px;
+  left: 520px;
   z-index: 1;
   overflow: hidden;
   display: inline-block;
