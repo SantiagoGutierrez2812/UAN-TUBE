@@ -1,6 +1,25 @@
-{% extends 'index.html' %}
-{% block title %} Login {% endblock %}
+
+{% block title %} dashboard {% endblock %}
 
 {% block content %}
-<h1>DASHBOARD</h1>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="titulo_account">
+    <h1>Mi Cuenta</h1>
+</div>
+<div class="nav_general">
+    <nav class="nav_account">
+        <!--
+        <a href="{{ url_for('dashboard') }}">Mi Cuenta</a>
+        <a href="{{ url_for('dashboard') }}">Mis Videos</a>
+        <a href="{{ url_for('dashboard') }}">Explorar</a>-->
+        <button class="boton_nav"><a href="{{ url_for('dashboard') }}">Mi Cuenta</a></button>
+        <button class="boton_nav"><a href="{{ url_for('dashboard') }}">Mis Videos</a></button>
+        <button class="boton_nav"><a href="{{ url_for('dashboard') }}">Explorar</a></button>
+    </nav>
+</div>
+
 {% endblock %}

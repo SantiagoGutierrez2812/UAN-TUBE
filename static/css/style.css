@@ -5,23 +5,22 @@ html {height: 100%;}
 }
 
 body {
-  background-image: linear-gradient(45deg, #5983ac, rgb(150, 195, 96));
-}
-
-.Titulo_6{
- position: relative;
- left: 580px;
+  background-image: linear-gradient(45deg, rgba(255, 60, 60, 0.71), rgb(255, 60, 60));
 }
 
 /*inicio*/
+.entrada{
+  text-align: center;
+  position: relative;
+}
 .nav {
   background: #fff; 
-  color: #454554; 
-  border: 2px solid #141155; 
+  color: #544545; 
+  border: 2px solid #551111; 
   padding: 16px 20px;
   border-radius: 3px; 
-  position: relative;
-  left: 520px;
+  text-align: center;
+  position: relative; 
   z-index: 1;
   overflow: hidden;
   display: inline-block;
@@ -32,7 +31,7 @@ body {
 }
 .nav::after {
   content: "";
-  background: #4741d7; 
+  background:  rgb(255, 60, 60); 
   position: absolute;
   z-index: -1;
   padding: 16px 20px;
@@ -98,7 +97,7 @@ text-decoration: none;
 }
 
 .boton1 {
-  background-color: #007BFF;
+  background-color: rgb(255, 60, 60);
   color: #fff;
   font-size: 18px;
   border: none;
@@ -110,7 +109,7 @@ text-decoration: none;
 }
 
 .boton1:hover {
-  background-color: #0056b3;
+  background-color: rgba(255, 60, 60, 0.827);
 }
 
 /******************************************************/
@@ -158,7 +157,7 @@ label {
 }
 
 .boton {
-  background-color: #007BFF;
+  background-color: rgb(255, 60, 60);
   color: #fff;
   font-size: 18px;
   border: none;
@@ -168,7 +167,7 @@ label {
 }
 
 .boton:hover {
-  background-color: #0056b3;
+  background-color: rgba(255, 60, 60, 0.827);
 }
 
 .boton-regresar {
@@ -182,5 +181,29 @@ label {
 }
 
 .boton-regresar:hover {
-  background-color: #999;
+  background-color: #bab8b8;
+}
+
+/******************************************************/
+
+/*Cuenta*/
+
+.titulo_account{
+  text-align: center;
+}
+.nav_account{
+  background-color: white;
+  border-radius: 5px;
+}
+.boton_nav {
+  background-color: white;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.boton_nav:hover {
+  background-color: rgb(255, 60, 60);
 }
